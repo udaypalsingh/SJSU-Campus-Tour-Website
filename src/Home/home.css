@@ -1,6 +1,28 @@
+@keyframes bgmove {
+    0%   {background-position: 0px 0px}
+    25%  {background-position: 5px 5px}
+    75%  {background-position: -5px -5px}
+    100% {background-position: 0px 0px}
+}
+
 .bg {
-    background-image: url("./sjsubg/towerhall.jpg");
+    background-image: url("./bg/secbg.png");
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: contain;
+    background-color: rgb(173, 216, 230);
+    animation: bgmove;
+    animation-duration: 2s;
+    animation-delay: 1s;
+   
+}
+
+.seconddiv {
+    background-image: url("./bg/bg.png");
     background-repeat: no-repeat;
     min-height: 100vh;
     background-size: cover;
+    
 }
+
+
