@@ -24,8 +24,8 @@ render() {
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav center>
             <MDBNavItem>
-            < a href="/" class="cta" padding="2rem">
-               <span >Take a Tour</span>
+            < a href={this.props.title === "Take a tour" ? "/tour" : "/"} class="cta" padding="2rem">
+              <span >{this.props.title}</span>
                   <svg width="13px" height="10px" viewBox="0 0 13 10">
                     <path d="M1,5 L11,5"></path>
                     <polyline points="8 1 12 5 8 9"></polyline>

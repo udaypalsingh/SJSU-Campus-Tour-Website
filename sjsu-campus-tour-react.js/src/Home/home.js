@@ -18,7 +18,7 @@ class Home extends Component{
     render(){
         return (
             <div>
-                <NavBar/>
+                <NavBar title='Take a tour'/>
                 <div className="bg"> 
                     <HomeCard/>
                 </div>

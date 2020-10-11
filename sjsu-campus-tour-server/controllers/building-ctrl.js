@@ -49,6 +49,21 @@ getBuildingById = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
+getBuildingByName = async (req, res) => {
+    await Building.find({_id: req.params.id}, (err, building) => {
+        if (err) {
+            return res.status(400).json({ success: false, error: err })
+        }
+
+        // if (!building) {
+        //     return res
+        //         .status(404)
+        //         .json({ success: false, error: `Building not found` })
+        // }
+        // return res.status(200).json({ success: true, data: building })
+    }).catch(err => console.log(err))
+}
+
 getAllBuildings = async (req, res) => {
     await Building.find({}, (err, building) => {
         if (err) {
@@ -69,6 +84,7 @@ module.exports = {
     createBuilding,
     getBuildingById,
     getAllBuildings,
+    getBuildingByName,
 }
 
 

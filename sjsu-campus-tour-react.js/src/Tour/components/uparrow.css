@@ -1,0 +1,58 @@
+  body {
+    background-color: #111;
+  }
+  
+  .up-arrow {
+    cursor: pointer;
+    height: 120px;
+    right: 57%;
+    position: absolute;
+    top: 15%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform 0.1s;
+    width: 80px;
+  }
+  .up-arrow-top, .up-arrow-bottom {
+    background-color: white;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+  .up-arrow-top:after, .up-arrow-bottom:after {
+    background-color: goldenrod;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s;
+  }
+  .up-arrow-top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+  }
+  .up-arrow-top:after {
+    left: 100%;
+    right: 0;
+    transition-delay: 0s;
+  }
+  .up-arrow-bottom {
+    transform: rotate(-225deg);
+    transform-origin: top left;
+  }
+  .up-arrow-bottom:after {
+    left: 0;
+    right: 100%;
+    transition-delay: 0.15s;
+  }
+  .up-arrow:hover .up-arrow-top:after {
+    left: 0;
+    transition-delay: 0.15s;
+  }
+  .up-arrow:hover .up-arrow-bottom:after {
+    right: 0;
+    transition-delay: 0s;
+  }
+  .up-arrow:active {
+    transform: translateX(-50%) translateY(-50%) scale(0.9);
+  }
