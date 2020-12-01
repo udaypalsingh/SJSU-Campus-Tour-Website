@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const Building = new Schema(
     { 
+        _id: {type: String, required: true},
         name: { type: String, required: true },
         img: {type: String, required: true},
         info: { type: String, required: true },

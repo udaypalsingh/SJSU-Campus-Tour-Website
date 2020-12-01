@@ -43,7 +43,7 @@ getBuildingById = async (req, res) => {
         if (!building) {
             return res
                 .status(404)
-                .json({ success: false, error: `Building not found` })
+                .json({ success: false, error: `Building not found`, data: building })
         }
         return res.status(200).json({ success: true, data: building })
     }).catch(err => console.log(err))
@@ -55,12 +55,12 @@ getBuildingByName = async (req, res) => {
             return res.status(400).json({ success: false, error: err })
         }
 
-        // if (!building) {
-        //     return res
-        //         .status(404)
-        //         .json({ success: false, error: `Building not found` })
-        // }
-        // return res.status(200).json({ success: true, data: building })
+        if (!building) {
+            return res
+                .status(404)
+                .json({ success: false, error: `Building not found` })
+        }
+        return res.status(200).json({ success: true, data: building })
     }).catch(err => console.log(err))
 }
 

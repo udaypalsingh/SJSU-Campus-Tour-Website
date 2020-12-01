@@ -12,7 +12,7 @@ class Tour extends Component{
         super(props)
         this.state = {
             buildings:[],
-            currId: "5f811aee302a0b683a5087d6",
+            currId: "5fc57c7b9d5374db554959c5",
             currBuilding:{}
         }
     };
@@ -34,7 +34,7 @@ class Tour extends Component{
             this.setState({ currBuilding: res.data });
           })
           .catch(err => console.error(err));
-          console.log(this.state.currBuilding);
+          console.log(this.state.currBuilding, "This is the current building");
       };
 
     getBuildings = async _ => {
@@ -99,10 +99,10 @@ class Tour extends Component{
       renderButtons = (id)=>{
         return(
             <div>
-                {id.left !== null ? <this.LeftArrow /> : null}
-                {id.right !== null ? <this.RightArrow/> : null}
-                {id.up !== null ? <this.UpArrow/> : null}
-                {id.down !== null ? <this.DownArrow/> : null}
+                {id.left !== "null" ? <this.LeftArrow /> : null}
+                {id.right !== "null" ? <this.RightArrow/> : null}
+                {id.up !== "null" ? <this.UpArrow/> : null}
+                {id.down !== "null" ? <this.DownArrow/> : null}
             </div>
         );
     }
@@ -158,6 +158,7 @@ class Tour extends Component{
     }
 
     render(){
+        console.log(this.state.currBuilding);
         return (
                 <div >
                     <NavBar title='Home'/>
