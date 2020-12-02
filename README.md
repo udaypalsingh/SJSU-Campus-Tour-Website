@@ -1,5 +1,5 @@
 SJSU Campus Tour Website Setup Guide:
-[GitHub Repository Link](https://github.com/udaypalsingh/SJSU-Campus-Tour-Website)
+(https://github.com/udaypalsingh/SJSU-Campus-Tour-Website)
 
 1. Clone the repository to a local machine.
 
